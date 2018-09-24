@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="oning"></div>
+    <div class="box">
+        <!-- <img src="../imgs/nv.jpeg" alt="..." class="img-rounded"> -->
+        <div class="boxA pull-left">
+            <img src="./imgs/nv.jpeg" alt="..." class="img-rounded">
+        </div>
+        <div class="boxB pull-right">
+            <img src="./imgs/nv.jpeg" alt="..." class="img-rounded">
+        </div>
+        <div class="boxC pull-left">
+            <img src="./imgs/nv.jpeg" alt="..." class="img-rounded">
+        </div>
+        <div class="boxD pull-right">
+            <img src="./imgs/nv.jpeg" alt="..." class="img-rounded">
+        </div>
+    </div>
+
+</body>
+<style>
+    .box {
+        width: 400px;
+        height: 500px;
+        margin: 200px auto;
+        position: relative;
+        /* background: orange; */
+    }
+
+    .oning {
+        width: 400px;
+        height: 500px;
+        /* background: orange; */
+        margin: 200px auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 0.4;
+    }
+
+    .box img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        transform: scale(1);
+    }
+
+    .box div {
+        width: 200px;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .box div img {
+        height: 500px;
+        width: 400px;
+        position: absolute;
+    }
+
+    .box .boxA {
+        background: green;
+        transform: scale(1);
+        top: 0px;
+        left: 0px;
+        transition: all 0.4s;
+        /* float: left; */
+    }
+
+    .box .boxA img {
+        top: 0;
+        left: 0;
+    }
+
+    .box .boxB {
+        /* float: right; */
+        background: yellow;
+        transform: scale(1);
+        top: 0px;
+        right: 0px;
+        transition: all 0.9s;
+    }
+
+    .box .boxB img {
+        top: 0;
+        right: 0;
+    }
+
+    .box .boxC {
+        background: tomato;
+        transform: scale(1);
+        top: 0;
+        left: 0;
+        transition: all 1s;
+        /* float: left; */
+    }
+
+    .box .boxC img {
+        left: 0;
+        top: -250px;
+    }
+
+    .box .boxD {
+        background: khaki;
+        transform: scale(1);
+        top: 0;
+        left: 0;
+        transition: all 0.6s;
+        /* float: right; */
+    }
+
+    .box .boxD img {
+        right: 0;
+        top: -250px;
+        /* transform: translateX(); */
+    }
+
+    .oning:hover {
+        transform: scale(1.5);
+    }
+
+    .oning:hover+.box .boxA {
+        transform: scale(1.5);
+        top: -62px;
+        left: -50px;
+    }
+
+    .oning:hover+.box .boxB {
+        transform: scale(1.5);
+        top: -61px;
+        right: -49px;
+    }
+
+    .oning:hover+.box .boxC {
+        transform: scale(1.5);
+        top: 63px;
+        left: -50px;
+    }
+
+    .oning:hover+.box .boxD {
+        transform: scale(1.5);
+        top: 63px;
+        left: 49px;
+    }
+</style>
+<!-- <script>
+    $('.box').onclick=function(){
+        $('.box boxA').css{(
+            transform : translateX(25px),
+        )}
+    }
+</script> -->
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="abox">
+            <span class="a xxx">1</span>
+            <span class="a">2</span>
+            <span class="a">3</span>
+            <span class="a">4</span>
+        </div>
+        <div class="tobox">
+            <div class="to">你好！</div>
+            <div class="to">你好天真啊！</div>
+            <div class="to">你看！</div>
+            <div class="to">你要涼!</div>
+        </div>
+    </div>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            width: 100%;
+            height: 100vh;
+            background: limegreen;
+        }
+        .abox{
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 0;
+        }
+        .abox .a{
+            font-size: 16px;
+            display: inline-block;
+            width: 50px;
+            background: linen;
+            cursor: pointer;
+        }
+        .tobox{
+            width: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .tobox .to{
+            line-height: 100px;
+            height: 100px;
+            width: 100%;
+            background: lightpink;
+            color: white;
+            text-align: center;
+            position: absolute;
+            display: none;
+        }
+        .box .abox .xxx{
+            background: lightpink;
+        }
+        .box .tobox .ddd{
+            display: block;
+        }
+    </style>
+    <script>
+        $('.box .tobox .to:first').show();
+        $('.box .abox .a').click(function(){
+            $(this).addClass('xxx').siblings().removeClass('xxx');
+            // $('.box .tobox .to').hide().eq($(this).index()).show();
+            $('.box .tobox .to').eq($(this).index()).addClass('ddd').siblings().removeClass('ddd');
+        });
+    </script>
+</body>
+</html>

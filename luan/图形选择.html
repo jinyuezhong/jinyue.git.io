@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="tebox">
+        <div class="te1 te backg">te1</div>
+        <div class="te2 te">te2</div>
+        <div class="te3 te">te3</div>
+    </div>
+    <div class="tenxbox">
+        <div class="tenx1 tenx backg">tenx1</div>
+        <div class="tenx2 tenx">tenx2</div>
+        <div class="tenx3 tenx">tenx3</div>
+    </div>
+    <style>
+        .te1,
+        .te2,
+        .te3 {
+            width: 50px;
+            height: 50px;
+            background: orange;
+            line-height: 50px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .tenx1,
+        .tenx2,
+        .tenx3 {
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            line-height: 100px;
+            text-align: center;
+            margin-top: 20px;
+            /* position: absolute; */
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .backg {
+            background: green;
+        }
+    </style>
+    <script>
+        // var box = document.querySelector('.te');
+        // var teny = document.querySelector('.tenx');
+        // var doing = 0;
+
+        // box.onclick = function() {
+        //     if(teny.style.display === 'none'){
+        //         teny.style.display = 'block';
+        //     }else{
+        //         teny.style.display = 'none';
+        //     }
+        // }
+
+        // var box = document.querySelector('.te');
+        // var teny = document.querySelector('.tenx');
+        // var doing = 0;
+
+        // box.onclick = function() {
+        //     if(doing === 0){
+        //         teny.style.display = 'none';
+        //         doing = 1;
+        //     }else{
+        //         teny.style.display = 'block';
+        //         doing = 0;
+        //     }
+        // }
+
+        $(".te1").click(function () {
+            // alert('ni hao !');
+            // $(".tenx").hide();
+            // $(".tenx").toggle();
+            // $('.tenx').toggleClass('hide');
+            // $('.tenx').css("background","green");
+            $(this).toggleClass('backg').siblings().removeClass('backg');
+            $('.tenx1').toggleClass('backg').siblings().removeClass('backg');
+        });
+        $(".te2").click(function(){
+            $(this).toggleClass('backg').siblings().removeClass('backg');
+            $('.tenx2').toggleClass('backg').siblings().removeClass('backg');
+        });
+        $(".te3").click(function(){
+            $(this).toggleClass('backg').siblings().removeClass('backg');
+            $('.tenx3').toggleClass('backg').siblings().removeClass('backg');
+        });
+
+        // $('.te:first').show();
+        // $('.te').click(function () {
+        //     $(this).addClass('backg').siblings().removeClass('backg');
+        //     $('.tenx').eq($(this).index()).toggleClass('backg');
+        // });
+    </script>
+</body>
+
+</html>
