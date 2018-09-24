@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<p id="box">不是的</p>
+	<button type="button" onclick="my()">提交</button>
+	<button type="button" onclick="you()">重置</button>
+	<hr />
+	<script>
+		document.write(Date());
+		//			alert("hi wdoer"); alert("不是数字");
+		document.write("<p>你好啊？</p>")
+
+		function my() {
+			document.getElementById("box").innerHTML = "你的，错的";
+		}
+
+		function you() {
+			document.getElementById("box").innerHTML = "不是的"
+		}
+	</script>
+	<hr />
+	<div style="width: 300px; height: 200px;"><img id="pctu" src="./imgs/M.jpg" style="width: 100%; height: 100%;" /></div>
+	<button id="syz" type="button" onclick="to()">上一张</button>
+	<button id="xyz" type="button" onclick="from()">下一张</button>
+	<script>
+		var imgs = ["M.jpg", "N.jpg", "O.jpg", "P.jpg", "R.jpg", "S.jpg"];
+		var syz = document.getElementById("syz");
+		var xyz = document.getElementById("xyz");
+		var pctu = document.getElementById("pctu");
+		var i = 0;
+
+		function to() {
+			i--;
+			if (i < 0) {
+				i = 4;
+			}
+			//			  	console.log(i);
+			pctu.src = "./imgs/" + imgs[i];
+		}
+
+		function from() {
+			i++;
+			if (i > imgs.length - 1) {
+				i = 0;
+			}
+			//			  	console.log(i);
+			pctu.src = "./imgs/" + imgs[i];
+		}
+	</script>
+	<hr />
+	<div class="tubox">
+		<div class="potoh">
+			<img src="./imgs/TXD.jpg" />
+			<img src=".imgs/DGJ.jpg" />
+			<img src="./imgs/WHM.jpg" />
+			<img src="./imgs/XQ0.jpg" />
+			<img src="./imgs/QGT.jpg" />
+		</div>
+		<div class="inputbox">
+			<input type="button" id="text" value="上一张" />
+			<input type="button" id="good" value="下一张" />
+		</div>
+	</div>
+	<style>
+		.tubox {
+			width: 350px;
+			height: 250px;
+			position: relative;
+			margin: 30px 50px;
+		}
+
+		.tubox .potoh {
+			width: 350px;
+			height: 250px;
+			;
+			position: absolute;
+		}
+
+		.tubox .potoh img {
+			width: 100%;
+			height: 100%;
+			border-radius: 20px;
+			position: absolute;
+			opacity: 0;
+			transition: all 0.8s;
+		}
+
+		.tubox .potoh img:nth-of-type(1) {
+			opacity: 1;
+		}
+
+		.tubox .inputbox {
+			position: absolute;
+			top: 120px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 24px;
+			margin: 0 auto;
+		}
+
+		.tubox .inputbox input {
+			opacity: 0.5;
+			color: white;
+			border: 0px solid red;
+			position: absolute;
+			outline: none;
+		}
+
+		.tubox .inputbox #text {
+			left: 0;
+		}
+
+		.tubox .inputbox #good {
+			right: 0;
+		}
+	</style>
+	<script>
+		var potoh = document.getElementsByClassName("potoh");
+		var imgsA = potoh[0].getElementsByTagName("img");
+		var text = document.getElementById("text");
+		var good = document.getElementById("good");
+		var i = 0;
+		text.onclick = function () {
+			i--;
+			if (i < 0) {
+				i = imgsA.length - 1;
+			}
+			//				console.log(i);
+			for (var t = 0; t < imgsA.length; t++) {
+				imgsA[t].style.opacity = "0";
+			}
+			imgsA[i].style.opacity = "1";
+		}
+		good.onclick = function () {
+			i++;
+			if (i > imgsA.length - 1) {
+				i = 0;
+			}
+			//				console.log(i);
+			for (var t = 0; t < imgsA.length; t++) {
+				imgsA[t].style.opacity = "0";
+			}
+			imgsA[i].style.opacity = "1";
+		}
+	</script>
+	<hr />
+	<!--<div class="tubox">
+			<div class="potoh">
+				<img src="./imgs/TXD.jpg" />
+				<img src="../imgs/DGJ.jpg" />
+				<img src="../imgs/WHM.jpg" />
+				<img src="../imgs/XQ0.jpg" />
+				<img src="../imgs/QGT.jpg" />
+			</div>
+		</div>-->
+</body>
+
+</html>

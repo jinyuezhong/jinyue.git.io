@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="A">
+			<div class="kan">
+				<a href="">
+					<div class="haha"></div>
+					<div class="gaga"></div>
+				</a>
+			</div>
+			<div class="kan">
+				<a href="">
+					<div class="ha"></div>
+					<div class="ga"></div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.A {
+				height: 150px;
+			}
+			
+			.kan {
+				width: 100px;
+				height: 100px;
+				background: rosybrown;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.kan div {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				border-radius: 50%;
+				border: 5px solid #00FFFF;
+				cursor: pointer;
+				transition: 1s;
+			}
+			
+			.kan .gaga {
+				background: #008000;
+				transform: translateX(-50px);
+				opacity: 0;
+				pointer-events: none;
+			}
+			
+			.kan .haha {
+				background: greenyellow;
+				opacity: 1;
+				border: 5px solid #00FFFF;
+				cursor: default;
+			}
+			
+			.kan a:hover .haha {
+				transform: translateX(50px);
+				opacity: 0;
+			}
+			
+			.kan a:hover .gaga {
+				transform: translateX(0px);
+				opacity: 1;
+				pointer-events: visible;
+			}
+			
+			.kan .ga {
+				background: #4D0908;
+				transform: translateY(50px);
+				opacity: 0;
+				pointer-events: none;
+			}
+			
+			.kan .ha {
+				background: #FFFF00;
+				opacity: 1;
+				border: 5px solid #00FFFF;
+				cursor: default;
+			}
+			
+			.kan a:hover .ha {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+			
+			.kan a:hover .ga {
+				transform: translateY(0px);
+				opacity: 1;
+				pointer-events: visible;
+			}
+		</style>
+		<hr />
+		<div class="Box">
+			<div class="B">
+				<a href="">
+					<div class="Bbox"></div>
+					<div class="Bfm"></div>
+					<div class="Bm"></div>
+					<div class="Bn">
+						<p>出來吧差點，美女在哪</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.Box {
+				height: 150px;
+				overflow: hidden;
+			}
+			
+			.B {
+				width: 100px;
+				height: 100px;
+				background: green;
+				position: relative;
+				margin: 25px 15px;
+			}
+			
+			.B div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				transition: all 1s;
+			}
+			
+			.Bbox {
+				border: 10px solid burlywood;
+				border-bottom-color: #4169E1;
+				border-left-color: #4169E1;
+				top: 15px;
+				left: 15px;
+			}
+			
+			.B .Bm {
+				background: #555555;
+				opacity: 0;
+				top: 25px;
+				left: 25px;
+			}
+			
+			.Bfm {
+				background: url(./imgs/im2.jpg);
+				background-size: cover;
+				top: 25px;
+				left: 25px;
+			}
+			
+			.Bn {
+				font-size: 10px;
+				text-align: center;
+				top: 25px;
+				left: 25px;
+				opacity: 0;
+				color: white;
+			}
+			
+			.B a:hover .Bbox {
+				transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+			}
+			
+			.B a:hover .Bm {
+				opacity: 0.8;
+			}
+			
+			.B a:hover .Bn {
+				opacity: 1;
+			}
+		</style>
+		<hr />
+		<div class="C">
+			<div class="Cbox">
+				<a href="">
+					<div class="Ck"></div>
+					<div class="Cv">
+						<p>哈哈哈，有西瓜</p>
+					</div>
+				</a>
+			</div>
+			<div class="Cbox">
+				<a href="">
+					<div class="Ck Cka"></div>
+					<div class="Cv Cva">
+						<p>哈哈哈，有西瓜</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.C {
+				height: 150px;
+			}
+			
+			.C .Cbox {
+				width: 100px;
+				height: 100px;
+				background: #00BFFF;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.C .Cbox div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				transition: all 1s;
+			}
+			
+			.C .Cbox .Ck {
+				width: 60px;
+				height: 60px;
+				background: url(./imgs/img9.jpg);
+				background-size: cover;
+				border: 10px solid rgba(255, 255, 255, 0.5);
+			}
+			
+			.Cbox .Cv {
+				background: rgba(0, 0, 0, 0.8);
+				transform: translateX(0px);
+				-webkit-transform: translateX(-80px);
+				color: white;
+				text-align: center;
+				font-size: 12px;
+				opacity: 0;
+				pointer-events: none;
+			}
+			
+			.Cbox .Cv p {
+				padding: 10px;
+			}
+			
+			.Cbox a:hover .Ck {
+				transform: rotate(-90deg);
+				-webkit-transform: rotate(-90deg);
+			}
+			
+			.Cbox a:hover .Cv {
+				transform: translateX(0px);
+				-webkit-transform: translateX(0px);
+				opacity: 0.7;
+				visibility: visible;
+			}
+			
+			.Cbox .Cva {
+				transform: translateY(-80px);
+				-webkit-transform: translateY(-80px);
+			}
+			
+			.Cbox a:hover .Cka {
+				transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+			}
+			
+			.Cbox a:hover .Cva {
+				transform: translateY(0px);
+				-webkit-transform: translateY(0px);
+				opacity: 0.7;
+			}
+		</style>
+		<hr />
+		<div class="D">
+			<div class="Dbox">
+				<a href="">
+					<div class="Df"></div>
+					<div class="Dv">
+						<p>I LOVE YOU</p>
+					</div>
+				</a>
+			</div>
+			<div class="Dbox">
+				<a href="">
+					<div class="Df Dfa"></div>
+					<div class="Dv Dvb">
+						<p>I LOVE YOU</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.D {
+				height: 150px;
+			}
+			
+			.D .Dbox {
+				width: 100px;
+				height: 100px;
+				background: #00FFFF;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.D .Dbox div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				transition: all 1s;
+			}
+			
+			.D .Dbox .Df {
+				width: 60px;
+				height: 60px;
+				background: url(./img/img11.jpg);
+				background-size: cover;
+				border: 10px solid rgba(255, 255, 255, 0.5);
+				transform-origin: 100% 50% 0;
+				-webkit-transform-origin: 150% 50% 0;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			
+			.D .Dbox .Dfa {
+				transform-origin: 50% 150% 0;
+				-webkit-transform-origin: 50% -50% 0;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			
+			.Dv {
+				background: #251C0F;
+				color: white;
+				text-align: center;
+				transform: translateX(-80px);
+				-webkit-transform: translateX(-80px);
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+			}
+			
+			.Dv p {
+				padding: 5px 10px;
+			}
+			
+			.D .Dbox a:hover .Df {
+				transform: scale(0.5);
+				-webkit-transform: scale(0.5);
+				z-index: 2;
+			}
+			
+			.D .Dbox a:hover .Dv {
+				transform: translateX(0px);
+				-webkit-transform: translateX(0px);
+				opacity: 1;
+				visibility: visible;
+				pointer-events: visible;
+			}
+			
+			.D .Dbox a:hover .Dfa {
+				transform: scale(0.5);
+				-webkit-transform: scale(0.5);
+				z-index: 2;
+			}
+			
+			.D .Dbox a:hover .Dvb {
+				transform: translateY(0px);
+				-webkit-transform: translateY(0px);
+				opacity: 1;
+				visibility: visible;
+				pointer-events: visible;
+			}
+		</style>
+		<hr />
+		<div class="E">
+			<div class="Ebox">
+				<a href="">
+					<div class="Ef"></div>
+					<div class="Ev">
+						<p>全国互联网</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.E {
+				height: 150px;
+			}
+			
+			.E .Ebox {
+				width: 100px;
+				height: 100px;
+				background: #3F454D;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.E .Ebox div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				transition: all 1s;
+			}
+			
+			.E .Ebox .Ef {
+				background: url(./imgs/img9.jpg);
+				background-size: cover;
+				border: 10px solid rgba(255, 255, 255, 0.5);
+				width: 60px;
+				height: 60px;
+			}
+			
+			.E .Ebox .Ev {
+				background: rgba(100, 145, 75, 0.6);
+				transform: rotateY(90deg);
+			}
+			
+			.E .Ebox .Ev p {
+				font-size: 12px;
+				color: white;
+				text-align: center;
+				margin: 23px 21px;
+			}
+			
+			.E .Ebox a:hover .Ev {
+				transform: rotateY(0);
+			}
+		</style>
+		<hr />
+		<div class="F">
+			<div class="Fbox">
+				<a href="">
+					<div class="border"></div>
+					<div class="Ff"></div>
+					<div class="Fv">
+						<p>看啊看！吓死你</p>
+					</div>
+				</a>
+			</div>
+			<div class="Fbox">
+				<a href="">
+					<div class="border bordera"></div>
+					<div class="Ff Ffa"></div>
+					<div class="Fv Fva">
+						<p>看啊看！吓死你</p>
+					</div>
+				</a>
+			</div>
+			<div class="Fboxb">
+				<a href="">
+					<div class="borderb"></div>
+					<div class="Ffb"></div>
+					<div class="Fvb">
+						<p>看啊看！吓死你</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.F {
+				height: 150px;
+			}
+			
+			.Fbox {
+				width: 100px;
+				height: 100px;
+				background: #DB6800;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.Fbox div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				transition: all 1s;
+			}
+			
+			.Fbox .border {
+				width: 60px;
+				height: 60px;
+				z-index: 1;
+				border: 10px solid rgba(255, 255, 255, 0.6);
+				transform: scale(1);
+				opacity: 1;
+			}
+			
+			.Ff {
+				background: url(./imgs/img2.jpg);
+				background-size: cover;
+				background-position: center;
+				transform: scale(1);
+				opacity: 1;
+			}
+			
+			.Fv {
+				background: #1F1009;
+				z-index: 2;
+				transform: scale(0);
+				opacity: 0;
+			}
+			
+			.Fv p,
+			.Fvb p {
+				color: white;
+				font-size: 12px;
+				margin: 25px 10px;
+			}
+			
+			.Fbox a:hover .border,
+			.Fbox a:hover .Ff {
+				transform: scale(1.5);
+				opacity: 0;
+			}
+			
+			.Fbox a:hover .Fv {
+				transform: scale(1);
+				opacity: 1;
+			}
+			
+			.Fbox a .bordera {
+				transform: scale(1);
+			}
+			
+			.Fbox a .Ffa {
+				transform: scale(1);
+			}
+			
+			.Fbox a .Fva {
+				transform: scale(1.5);
+				opacity: 0;
+			}
+			
+			.Fbox a:hover .bordera,
+			.Fbox a:hover .Ffa {
+				transform: scale(0);
+			}
+			
+			.Fbox a:hover .Fva {
+				transform: scale(1);
+				opacity: 1;
+			}
+			
+			.Fboxb {
+				width: 100px;
+				height: 100px;
+				background: #DB6800;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.Fboxb div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			
+			.Fboxb a .borderb {
+				width: 60px;
+				height: 60px;
+				z-index: 1;
+				border: 10px solid rgba(255, 255, 255, 0.6);
+				transform: scale(1);
+			}
+			
+			.Fboxb a .Ffb {
+				transform: scale(1);
+				background: url(./imgs/img9.jpg);
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.Fboxb a .Fvb {
+				transform: scale(0);
+				opacity: 0;
+				background: #1F1009;
+				z-index: 2;
+				transition: all 1s;
+			}
+			
+			.Fboxb a:hover .borderb,
+			.Fboxb a:hover .Ffb {
+				transform: scale(0);
+				transition: 1s;
+			}
+			
+			.Fboxb a:hover .Fvb {
+				transform: scale(1);
+				opacity: 1;
+				transition: all 1s 1s;
+			}
+		</style>
+		<hr />
+		<div class="G">
+			<div class="box">
+				<a href="">
+					<div class="Gf f"></div>
+					<div class="Gv v">
+						<p>家国天下，无敌挂</p>
+					</div>
+				</a>
+			</div>
+			<div class="box">
+				<a href="">
+					<div class="Gfa f"></div>
+					<div class="Gva v">
+						<p>家国天下，无敌挂</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.G {
+				height: 150px;
+			}
+			
+			.box {
+				width: 100px;
+				height: 100px;
+				background: #B8860B;
+				position: relative;
+				float: left;
+				margin: 25px 15px;
+			}
+			
+			.box div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			
+			.f {
+				background: url(./imgs/im1.jpg);
+				background-position: center;
+				background-size: cover;
+			}
+			
+			.v {
+				background: #1F1009;
+			}
+			
+			.v p {
+				color: white;
+				font-size: 12px;
+				margin: 25px 10px;
+			}
+			
+			.Gf {
+				transform: scale(1);
+				-webkit-transform: scale(1);
+				transition: all 1s;
+				opacity: 1;
+			}
+			
+			.Gv {
+				transform: translateX(-80px);
+				-webkit-transform: translateX(-80px);
+				opacity: 0;
+				transition: all 0.5s;
+				pointer-events: none;
+			}
+			
+			.box a:hover .Gf {
+				transform: scale(0);
+				-webkit-transform: scale(0);
+				opacity: 0;
+			}
+			
+			.box a:hover .Gv {
+				transform: translateX(0);
+				-webkit-transform: translateX(0);
+				opacity: 1;
+				transition: all 0.5s 0.8s;
+				pointer-events: visible;
+			}
+			
+			.Gfa {
+				transform: scale(1);
+				-webkit-transform: scale(1);
+				transition: all 1s;
+				opacity: 1;
+			}
+			
+			.Gva {
+				transform: translateY(-80px);
+				-webkit-transform: translateY(-80px);
+				opacity: 0;
+				transition: all 0.5s;
+				pointer-events: none;
+			}
+			
+			.box a:hover .Gfa {
+				transform: scale(0);
+				-webkit-transform: scale(0);
+				opacity: 0;
+			}
+			
+			.box a:hover .Gva {
+				transform: translateY(0);
+				-webkit-transform: translateY(0);
+				opacity: 1;
+				transition: all 0.5s 0.8s;
+				pointer-events: visible;
+			}
+		</style>
+		<hr />
+		<!-- <div class="I">
+			<div class="box Ibox">
+				<a href="">
+					<div class="f If">
+						<div class="f Ifa"></div>
+					</div>
+					<div class="v Iv">
+						<div class="v Iva">
+							<p>NBFbbcsdf dsaa asdasd</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<style type="text/css">
+			.Ibox {
+				background: #3D8403;
+			}
+		</style> -->
+	</body>
+
+</html>

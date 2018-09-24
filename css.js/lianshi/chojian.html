@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="A"><img src="./imgs/turntable-bg.jpg" /></div>
+			<div id="B"><img id="B" src="./imgs/turntable.png" /></div>
+			<div id="C"><img src="./imgs/pointer.png" /></div>
+		</div>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 400px;
+				height: 350px;
+				background: orange;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.box div {
+				position: absolute;
+			}
+			
+			.box img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.box .A {
+				width: 400px;
+				height: 365px;
+			}
+			
+			.box #B {
+				width: 276px;
+				height: 276px;
+				top: 35px;
+				left: 73px;
+				background: red;
+				border-radius: 50%;
+				transition: all 1s;
+				/*animation: nun 1s infinite;
+				-webkit-animation: nun 1s infinite;*/
+			}
+			
+			.box #C {
+				/*display: block;*/
+				/*position: absolute;*/
+				top: 100px;
+				left: 166px;
+				width: 100px;
+				height: 120px;
+				background: none;
+				border-radius: 50%;
+				border: none;
+				outline: none;
+			}
+		</style>
+		<script>
+			var B = document.getElementById("B");
+			var C = document.getElementById("C");
+			
+			var doing=true;
+			
+			C.onclick = function() {
+
+				if(doing===true){
+					
+					doing=false;
+
+					var shumu = Math.floor(Math.random() * 100);
+
+					var go;
+
+					if(shumu < 5) {
+						go = {
+							code: 1,
+							text: "免单4999元"
+						}
+					} else if(shumu < 13) {
+						go = {
+							code: 2,
+							text: "免单50元"
+						}
+					} else if(shumu < 25) {
+						go = {
+							code: 3,
+							text: "免单10元"
+						}
+					} else if(shumu < 38) {
+						go = {
+							code: 4,
+							text: "免单5元"
+						}
+					} else if(shumu < 50) {
+						go = {
+							code: 5,
+							text: "免分期服务费"
+						}
+					} else if(shumu < 70) {
+						go = {
+							code: 6,
+							text: "提高额度"
+						}
+					} else {
+						go = {
+							code: 7,
+							text: "努力，加油"
+						}
+					}
+				};
+				
+				console.log(go);
+				
+				var geting=30+(360/7) * (go.code-1);
+				B.style.transition = 'all 3s';
+				
+				B.style.transform = 'rotate(' + (geting+360 * 3) + 'deg)';
+				setTimeout(function() {
+						B.style.transition = 'all 0s';
+						B.style.transform = 'rotate(' + geting + 'deg)';
+						alert(go.text);
+						doing = true;
+				}, 3000);
+			};
+		</script>
+	</body>
+
+</html>
