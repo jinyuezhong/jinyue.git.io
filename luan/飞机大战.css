@@ -16,7 +16,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(/imgs/background-start.png);
+  background: url(./imgs/background-start.png);
 }
 #dabox #kaishi #start {
   line-height: 40px;
@@ -39,7 +39,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(/imgs/background-game.png);
+  background: url(./imgs/background-game.png);
 }
 #dabox #zhoxi #tang {
   display: none;
