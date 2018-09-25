@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background: linen;
+}
+#dabox {
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  background: lightseagreen;
+  position: relative;
+}
+#dabox #kaishi {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/imgs/background-start.png);
+}
+#dabox #kaishi #start {
+  line-height: 40px;
+  width: 210px;
+  background: lightslategray;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 130px;
+  cursor: pointer;
+}
+#dabox #zhoxi {
+  display: none;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/imgs/background-game.png);
+}
+#dabox #zhoxi #tang {
+  display: none;
+}
+#dabox #zhoxi #tang button:nth-of-type(2) {
+  bottom: 70px;
+}
+#dabox #zhoxi #tang button {
+  line-height: 40px;
+  width: 210px;
+  background: lightslategray;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 130px;
+  cursor: pointer;
+  z-index: 888;
+}
+#dabox #zhoxi img {
+  position: absolute;
+}
+#dabox #guang {
+  z-index: 8888;
+  display: none;
+  padding-top: 60%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#dabox #guang p:nth-of-type(2) {
+  font-size: 30px;
+  color: orange;
+}
+#dabox #guang p {
+  line-height: 45px;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: '宋体';
+}
+#dabox #guang button {
+  line-height: 40px;
+  width: 210px;
+  background: lightslategray;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 130px;
+  cursor: pointer;
+  position: relative;
+  bottom: 0;
+}
+.p-h {
+  line-height: 45px;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: '宋体';
+}
+.zhoti {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button-hai {
+  line-height: 40px;
+  width: 210px;
+  background: lightslategray;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 130px;
+  cursor: pointer;
+}
