@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <select name="shen" id="shen">
+        <option value="请选择省份">请选择省份</option>
+    </select>
+    <select name="city" id="city">
+        <option value="请选择城市">请选择城市</option>
+    </select>
+    <style>
+        select{
+            width: 200px;
+            line-height: 30px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        var shen = $('#shen');
+        var city = $('#city');
+        var data;
+        $.ajax({
+            type:"get",
+            url:"./citys.json",
+            dataType:"json",
+            success:function(response){
+                data=response.provinces;
+                $.each(response.provinces,function(index,value){
+                    shen.append('<option value="' + value.provinceName + '">' + value.provinceName + '</option>');
+                });
+            }
+        });
+
+        shen.change(function(e){
+            city.empty();
+
+            var _this = this;
+
+            $.each(data,function(index,value){
+                if(value.provinceName === _this.value){
+                    $.each(value.citys,function(index,value){
+                        city.append('<option value="' + value.citysName + '">' + value.citysName + '</option>')
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>
