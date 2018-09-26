@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <label>
+        <input type="range" min="1" max="5" step="1" value="1"/>
+        <span>1</span>
+    </label>
+
+    <div class="imgbox">
+        <img src="./imgs/img4.jpg" />
+        <div class="fanda"></div>
+        <div class="biao"></div>
+    </div>
+    <div class="qiu">
+        <img src="./imgs/img4.jpg" />
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        label{
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .imgbox {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .imgbox img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .imgbox .fanda {
+            height: 100px;
+            width: 100px;
+            background: orange;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .imgbox .biao {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .qiu {
+            height: 200px;
+            width: 200px;
+            background: orange;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+            display: none;
+        }
+
+        .qiu img {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        var maft = 1;
+        var inpu = $('label input');
+        var span = $('label span');
+
+        var ibox = $('.imgbox');
+        var fand = $('.imgbox .fanda');
+        var biao = $('.imgbox .biao');
+        // var mag = $('.qiu img').width() / $('.imgbox img').width();
+        var fimg = $('.qiu img');
+        var qiun = $('.qiu');
+
+        inpu.change(function(ev){
+            maft = inpu.val();
+            span.text(maft);
+            fimg.css({
+                width: ibox.width() * maft,
+                height: ibox.height() * maft
+            });
+        });
+
+        biao.mousemove(function (ev) {
+            var x = ev.offsetX;
+            var y = ev.offsetY;
+
+            var wid = ibox.width() / maft;
+            var hei = ibox.height() / maft;
+
+            if (x <= (wid/2)) {
+                x = (wid/2);
+            }
+            if (x >= (200-(wid/2))) {
+                x = (200-(wid/2));
+            }
+            if (y <= (wid/2)) {
+                y = (wid/2);
+            }
+            if (y >= (200-(wid/2))) {
+                y = (200-(wid/2));
+            }
+            fand.css({
+                width: wid,
+                height: hei,
+                top: y - hei/2,
+                left: x - wid/2,
+                opacity: 0.5
+            });
+            fimg.css({
+                top: (y - hei/2) * -maft,
+                left: (x - wid/2) * -maft
+            });
+        });
+        biao.hover(function(){
+            fand.show();
+            qiun.show();
+        },function(){
+            fand.hide();
+            qiun.hide();
+        });
+    </script>
+</body>
+
+</html>
