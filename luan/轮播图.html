@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="go">
+            <div class="imgbox">
+                <img src="./imgs/p15.jpg" />
+                <img src="./imgs/p16.jpg" />
+                <img src="./imgs/p17.jpg" />
+                <img src="./imgs/p18.jpg" />
+            </div>
+            <div class="xiao"></div>
+        </div>
+        <div class="oning">
+            <button class="s">s</button>
+            <button class="x">x</button>
+        </div>
+
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background: lightgreen;
+            /* position: relative; */
+        }
+
+        .box .go {
+            width: 201px;
+            height: 200px;
+            background: tomato;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* border-radius: 50%; */
+        }
+
+        .box .go .imgbox {
+            width: 800px;
+            height: 200px;
+            /* background: rgb(158, 22, 42); */
+            font-size: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        .box .go .imgbox img {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            transition: all 1s;
+        }
+
+        .box .oning {
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            /* background: orange; */
+        }
+
+        .box .oning button {
+            height: 30px;
+            width: 50px;
+        }
+
+        .box .oning .x {
+            float: right;
+        }
+
+        .box .go .xiao {
+            text-align: center;
+            position: absolute;
+            bottom: 7px;
+            width: 100%;
+        }
+
+        .box .go .xiao i {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: white;
+            margin: 0 5px;
+            border-radius: 50%;
+        }
+
+        .box .xiao i.are {
+            background: orange;
+        }
+    </style>
+    <script>
+        // $('.x').click(function(){
+        //     $('.box .go .imgbox img').eq(0).css('margin-left','-200px');
+        //     $('.box .go .imgbox img:eq(0)').animate({'margin-left':'left'},1000,function(){
+        //         $(".box .go .imgbox img").eq(0).css('margin-left','0').appendTo('.box .go .imgbox');
+        //     });
+        // });
+
+        // 根据图片的个数生成对应的小圆点
+        $('.box .go .imgbox img').each(function () {
+            $('.box .go .xiao').append('<i></i>');
+        });
+        $('.box .go .xiao i').first().addClass('are');
+
+        var jiu = $('.box .go .imgbox img');
+
+        $('.box .go .xiao i').click(function () {
+            // 当前第一个章图片的索引值（按照老的）
+            // jiu.index($('.box .go .imgbox img:eq(0)'));
+
+            $(this).addClass('are').siblings().removeClass('are');
+            // console.log('从右到左')
+            if ($(this).index() > jiu.index($('.box .go .imgbox img:eq(0)'))) {
+                // 根据点击的小圆点的索引找到对应的图片 并把它移动到第一张的后面
+                jiu.eq($(this).index()).insertAfter('.box .go .imgbox img:eq(0)');
+
+                //jq内置动画吧content向左移动 一个图片的宽度
+                $('.box .go .imgbox').animate({
+                    'margin-left': '-200px'
+                }, 1000, function () {
+                    // 等动画执行完成之后在把content的外边距重置为0，并把第一张图片移动到最后面
+                    $('.box .go .imgbox').css('margin-left', '0').find('img').eq(0).appendTo('.box .go .imgbox');
+                });
+            }
+            // console.log('从左到右')
+            else if ($(this).index() < jiu.index($('.box .go .imgbox img:eq(0)'))) {
+                jiu.eq($(this).index()).insertBefore('.box .go .imgbox img:eq(0)');
+                $('.box .go .imgbox').css({
+                    'margin-left': '-200px'
+                }).animate({
+                    'margin-left': '0'
+                }, 1000)
+            }
+        });
+
+        $('.x').click(function () {
+            var tx = jiu.index($('.box .go .imgbox img:eq(0)')) + 1 ;
+            if (tx > jiu.length - 1) {
+                tx = 0;
+            }
+            $('.box .go .xiao i').eq(tx).addClass('are').siblings().removeClass('are');
+            jiu.eq(tx).insertAfter('.box .go .imgbox img:eq(0)');
+            $('.box .go .imgbox').animate({
+                'margin-left': '-200px'
+            }, 1000, function () {
+                $('.box .go .imgbox').css('margin-left', '0').find('img').eq(0).appendTo('.box .go .imgbox');
+            });
+        })
+        $('.s').click(function () {
+            var ts = jiu.index($('.box .go .imgbox img:eq(0)')) - 1;
+            if (ts < 0) {
+                ts = jiu.length - 1;
+            }
+            $('.box .go .xiao i').eq(ts).addClass('are').siblings().removeClass('are');
+            jiu.eq(ts).insertBefore('.box .go .imgbox img:eq(0)');
+            $('.box .go .imgbox').css({
+                'margin-left': '-200px'
+            }).animate({
+                'margin-left': '0'
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>
