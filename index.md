@@ -11,4 +11,4 @@ luan:<br/>
 [图片分割](http://jinyuezhong.github.io/luan/图片分割.html)<br/>
 [菜单选择](http://jinyuezhong.github.io/luan/菜单选择.html)<br/>
 [飞机大战](http://jinyuezhong.github.io/luan/飞机大战.html)<br/>
-
+[图片放大镜](http://jinyuezhong.github.io/luan/9-12-图片放大镜.html)</br>
