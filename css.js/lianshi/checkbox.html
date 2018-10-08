@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>10-4-checkbox</title>
+</head>
+
+<body>
+    <div class="tox">
+        <label class="box">
+            <input type="radio" name="lol">
+            <div class="slidet">前端工程师</div>
+        </label>
+        <label class="box">
+            <input type="radio" name="lol">
+            <div class="slidet">视觉设计师</div>
+        </label>
+    </div>
+    <br>
+    <div class="lox">
+        <label class="box">
+            <input type="checkbox" name="lai">
+            <div class="slidet">svg</div>
+        </label>
+        <label class="box">
+            <input type="checkbox" name="lai">
+            <div class="slidet">html5</div>
+        </label>
+        <label class="box">
+            <input type="checkbox" name="lai">
+            <div class="slidet">java</div>
+        </label>
+    </div>
+    <style>
+        .tox {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .lox{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            display: inline-block;
+        }
+
+        .box input {
+            display: none;
+        }
+
+        .box .slidet {
+            background: gray;
+            line-height: 40px;
+            border-radius: 5px;
+            padding: 0 20px 0 10px;
+        }
+
+        .box .slidet::before {
+            content: ' ';
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: url(./imgs/input-unchecked.png);
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-top: -3px;
+        }
+
+        .box input:checked+.slidet {
+            background: orange;
+        }
+
+        .box input:checked+.slidet::before {
+            background: url(./imgs/input-checked.png);
+        }
+    </style>
+    <hr>
+    <div class="Bho">
+        <div class="Bjo">
+            <label class="Bko">
+                <input type="radio" name="sex" value="nan" />男
+                <input type="radio" name="sex" value="nv" />女
+            </label>
+        </div>
+        <br>
+        <input type="checkbox" name="xxx" value="茶" />茶
+        <input type="checkbox" name="xxx" value="哎" />哎
+        <input type="checkbox" name="xxx" value="劳" />劳
+        <input type="checkbox" name="xxx" value="善" />善
+    </div>
+    <style>
+        .Bho {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .Bko {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 15px;
+            height: 15px;
+        }
+
+        input:checked {
+            background-color: #FF0000;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+    <hr>
+    <div class="Cbox">
+        <span>充填盒子</span>
+        <i></i>
+    </div>
+    <style>
+        body{
+            text-align: center;
+        }
+        .Cbox {
+            position: relative;
+            display: inline-block;
+            margin: 30px auto;
+            width: 200px;
+            height: 50px;
+            background: orange;
+            overflow: hidden;
+            border-radius: 10px;
+            z-index: 1;
+            
+        }
+
+        span {
+            color: white;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        i {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            transition: all 1s;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .Ctian i {
+            transform: scale(5);
+        }
+    </style>
+    <script>
+        $('.Cbox').hover(function (ev) {
+            $('i').css({
+                top: (ev.clientY - $('.Cbox').offset().top - 50),
+                left: (ev.clientX - $('.Cbox').offset().left - 50)
+            })
+            $('.Cbox').addClass('Ctian');
+            // console.log((ev.clientX - $('.Cbox').offset().left) + '/' + (ev.clientY - $('.Cbox').offset().top))
+        }, function () {
+            $('.Cbox').removeClass('Ctian');
+        })
+    </script>
+</body>
+
+</html>
