@@ -6,7 +6,13 @@ css+js:<br/>
 [图片样式1](http://jinyuezhong.github.io/css.js/lianshi/tupianscript.html)<br/>
 [图片样式2](http://jinyuezhong.github.io/css.js/lianshi/tupianyanshi+css.html)<br/>
 [反弹球](http://jinyuezhong.github.io/css.js/tantiao.html)<br/>
+[css，动画，旋转](http://jinyuezhong.github.io/css.js/lianshi/10-2-transform.html)<br/>
+[不定方向反弹球](http://jinyuezhong.github.io/css.js/lianshi/fangtangqiu.html)<br/>
 
+city<br/>
+[城市](http://jinyuezhong.github.io/city/cityxuan.html)<br>
+svg<br>
+[svg动画](http://jinyuezhong.github.io/svg/10-4-SVG.html)<br>
 luan:<br/>
 [图形选择](http://jinyuezhong.github.io/luan/图形选择.html)<br/>
 [图片分割](http://jinyuezhong.github.io/luan/图片分割.html)<br/>
