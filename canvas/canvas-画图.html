@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas画图</title>
+</head>
+
+<body>
+    <div id='ue'>法国国旗</div>
+    <canvas id="can"></canvas>
+    <style>
+        #ue {
+            margin-left: 50px;
+        }
+
+        #can {
+            width: 600px;
+            height: 400px;
+            border: 2px solid orange;
+            /* background: white, red; */
+            margin: 50px;
+            padding: 10px
+        }
+    </style>
+    <script>
+        var ext = document.getElementById('can');
+        var context = ext.getContext('2d');
+
+        context.fillStyle = 'blue';
+        context.fillRect(0, 0, 100, 150);
+
+        context.fillStyle = 'white';
+        context.fillRect(100, 0, 100, 150);
+
+        context.fillStyle = 'red';
+        context.fillRect(200, 0, 100, 150);
+    </script>
+    <hr>
+    <div id='ue'>安卓图标</div>
+    <canvas id="anzhuo" height="600" width="600"></canvas>
+    <style>
+        #anzhuo {
+            /* height: 600px;
+            width: 600px; */
+            /* background: limegreen; */
+            border: 1px solid orange;
+            margin: 30px;
+            /* background: greenyellow; */
+        }
+    </style>
+    <script>
+        var can = document.getElementById('anzhuo');
+        var tan = can.getContext('2d');
+
+        
+        tan.strokeStyle = "green";
+        
+        tan.fillStyle = "green";
+        //小天线
+        tan.lineWidth = 10;
+        tan.beginPath();
+        tan.moveTo(280,145);
+        tan.lineTo(230,70);
+        tan.fill();
+        tan.stroke();
+
+        
+
+        tan.beginPath();
+        tan.moveTo(320,145);
+        tan.lineTo(370,70);
+        tan.fill();
+        tan.stroke();
+        
+        tan.lineWidth = 2;
+        tan.beginPath();
+        tan.arc(230,70,4,0,2*Math.PI,true);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.arc(370,70,4,0,2*Math.PI,true);
+        tan.fill();
+        tan.stroke();
+        //小天线
+        
+        //头
+        tan.beginPath();
+        tan.arc(300,200,100,0,Math.PI,true);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.fillStyle = "white";
+        tan.arc(250,160,10,0,2*Math.PI,true);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.arc(350,160,10,0,2*Math.PI,true);
+        tan.fill();
+        tan.stroke();
+        //头
+        //身
+        tan.fillStyle = "green";
+        tan.beginPath();
+        tan.moveTo(200, 220);
+        tan.lineTo(400,220);
+        tan.lineTo(400,405);
+        tan.lineTo(375,430);
+        tan.lineTo(225,430);
+        tan.lineTo(200,405);
+        tan.lineTo(200,230);
+        tan.fill();
+
+        tan.beginPath();
+        tan.arc(219,411,18,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.arc(381,411,18,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+        //身
+        //腿
+        tan.beginPath();
+        tan.moveTo(240,430);
+        tan.lineTo(280,430);
+        tan.lineTo(280,500);
+        tan.lineTo(240,500);
+        tan.lineTo(240,430);
+        tan.fill();
+
+        tan.beginPath();
+        tan.arc(260,500,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.moveTo(320,430);
+        tan.lineTo(360,430);
+        tan.lineTo(360,500);
+        tan.lineTo(320,500);
+        tan.lineTo(320,430);
+        tan.fill();
+
+        tan.beginPath();
+        tan.arc(340,500,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+        //腿
+        //手
+        tan.beginPath();
+        tan.arc(160,240,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.arc(160,340,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+        
+        tan.beginPath();
+        tan.moveTo(180,240);
+        tan.lineTo(180,340);
+        tan.lineTo(140,340);
+        tan.lineTo(140,240);
+        tan.lineTo(180,240);
+        tan.fill();
+        
+        tan.beginPath();
+        tan.arc(440,240,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.arc(440,340,19,0,2*Math.PI,false);
+        tan.fill();
+        tan.stroke();
+
+        tan.beginPath();
+        tan.moveTo(420,240);
+        tan.lineTo(420,340);
+        tan.lineTo(460,340);
+        tan.lineTo(460,240);
+        tan.lineTo(420,240);
+        tan.fill();
+        //手
+    </script>
+<hr>
+</body>
+
+</html>

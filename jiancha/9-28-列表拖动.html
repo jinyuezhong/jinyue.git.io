@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表拖动</title>
+</head>
+
+<body>
+    <ul id="au">
+        <li class="it">A</li>
+        <li class="it">B</li>
+        <li class="it">C</li>
+        <li class="it">D</li>
+        <li class="it">E</li>
+    </ul>
+    <style>
+        #au {
+            width: 200px;
+            margin: 50px;
+            border: 2px solid red;
+            padding: 0;
+        }
+
+        .it {
+            color: white;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            list-style: none;
+            background: orange;
+            margin: 10px auto;
+            border: 1px solid blue;
+            /* background: black; */
+        }
+    </style>
+    <script>
+        var its = document.querySelectorAll('#au li.it');
+        var dragElement;
+
+        for (var i = 0; i < its.length; i++) {
+            its[i].draggable = true;
+            its[i].ondragstart = function (e) {
+                dragElement = this;
+                dragElement.style.background = 'red';
+            };
+            its[i].ondragenter = function (e) {
+                this.style.border = '1px dashed black';
+                e.preventDefault();
+            };
+            its[i].ondragleave = function (e) {
+                this.style.border = '1px solid blue';
+                e.preventDefault();
+            }
+            its[i].ondrop = function (e) {
+                this.parentNode.insertBefore(dragElement, this);
+                this.style.border = '1px solid blue';
+                dragElement.style.background = 'orange';
+                // dragElement.style.animationName = 'scale';
+            }
+
+        }
+        document.ondragover = function (e) {
+            e.preventDefault();
+        }
+        document.ondrag = function(e) {
+            e.preventDefault();
+        }
+    </script>
+</body>
+
+</html>
