@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        img {
+            margin-top: 50px;
+            ;
+            position: absolute;
+        }
+    </style>
+    <script>
+        var saice = function (x, y, imgs, going) {
+            this.x = x;
+            this.y = y;
+            this.going = going;
+            this.imgs = imgs;
+            this.gg = function () {
+                this.imgbox = document.createElement('img');
+                this.imgbox.src = this.imgs;
+                this.imgbox.style.top = this.x + 'px';
+                this.imgbox.style.left = this.y + 'pc';
+                document.body.appendChild(this.imgbox);
+            }
+        }
+
+        saice.prototype.move = function () {
+            this.imgbox.style.left = parseInt(this.imgbox.style.left) + this.going + 'px';
+        }
+
+        var car1 = new saice(0, 0, './imgs/car1.png', 2);
+        car1.gg();
+        var car2 = new saice(100, 0, './imgs/car2.png', 1);
+        car2.gg();
+
+        setInterval(function () {
+            car1.move();
+            car2.move();
+        }, 30);
+    </script>
+</body>
+
+</html>

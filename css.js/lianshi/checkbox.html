@@ -11,26 +11,26 @@
 
 <body>
     <div class="tox">
-        <label class="box">
+        <label class="gbox">
             <input type="radio" name="lol">
             <div class="slidet">前端工程师</div>
         </label>
-        <label class="box">
+        <label class="gbox">
             <input type="radio" name="lol">
             <div class="slidet">视觉设计师</div>
         </label>
     </div>
     <br>
     <div class="lox">
-        <label class="box">
+        <label class="gbox">
             <input type="checkbox" name="lai">
             <div class="slidet">svg</div>
         </label>
-        <label class="box">
+        <label class="gbox">
             <input type="checkbox" name="lai">
             <div class="slidet">html5</div>
         </label>
-        <label class="box">
+        <label class="gbox">
             <input type="checkbox" name="lai">
             <div class="slidet">java</div>
         </label>
@@ -46,38 +46,40 @@
             margin-bottom: 20px;
         }
 
-        .box {
+        .gbox {
             display: inline-block;
         }
 
-        .box input {
+        .gbox input {
             display: none;
         }
 
-        .box .slidet {
+        .gbox .slidet {
             background: gray;
             line-height: 40px;
             border-radius: 5px;
             padding: 0 20px 0 10px;
         }
 
-        .box .slidet::before {
-            content: ' ';
+        .gbox .slidet::before {
+            content: '';
             width: 16px;
             height: 16px;
             display: inline-block;
+            /* background: url(./imgs/input-unchecked.png); */
             background: url(./imgs/input-unchecked.png);
             vertical-align: middle;
             margin-right: 5px;
             margin-top: -3px;
         }
 
-        .box input:checked+.slidet {
+        .gbox input:checked+.slidet {
             background: orange;
         }
 
-        .box input:checked+.slidet::before {
-            background: url(./imgs/input-checked.png);
+        .gbox input:checked+.slidet::before {
+            /* background: url(./imgs/input-checked.png); */
+            background-image: url(./imgs/input-checked.png);
         }
     </style>
     <hr>
@@ -104,27 +106,422 @@
             margin-bottom: 20px;
         }
 
-        input {
+        .Bho input {
             width: 15px;
             height: 15px;
         }
 
-        input:checked {
+        .Bho input:checked {
             background-color: #FF0000;
             width: 30px;
             height: 30px;
         }
     </style>
+    <hr/>
+    <div class="ci">
+        <input type="button" id="btn" onclick="" value="btn 0" />
+        <input type="button" id="value" onclick="" value="value 0" />
+    </div>
+    <style>
+        .ci {
+            margin: 30px auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        input {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+    <script>
+        var a = 0;
+        var b = 0;
+        var btn = document.getElementById("btn");
+        var value = document.getElementById("value");
+        value.onclick = function () {
+            boc();
+        }
+        btn.onclick = function () {
+            box();
+        }
+        var box = function () {
+            a += 1;
+            var geting = a;
+            console.log("btn:" + geting);
+            document.getElementById('btn').value = "btn" + "  " + geting;
+        }
+        var boc = function () {
+            b += 1;
+            var valueA = b;
+            console.log("value:" + valueA);
+            document.getElementById('value').value = "value" + "  " + valueA;
+        }
+    </script>
     <hr>
-    <div class="Cbox">
+    <label class="Ebox">
+        <input type="checkbox" />
+        <div class="A">
+            <div class="B"></div>
+        </div>
+    </label>
+    <Label class="Ebox">
+        <input type="checkbox" />
+        <div class="A N">
+            <div class="B N"></div>
+        </div>
+    </Label>
+    <style type="text/css">
+        .Ebox {
+            margin: 30px auto;
+            display: inline-block;
+        }
+
+        .Ebox input {
+            display: none;
+        }
+
+        .Ebox .N {
+            border-radius: 50%;
+        }
+
+        .Ebox .A.N {
+            border-radius: 50px;
+        }
+
+        .A {
+            margin: 0 30px;
+            float: left;
+            width: 100px;
+            height: 50px;
+            background: greenyellow;
+            overflow: hidden;
+            cursor: pointer;
+            /*position: relative;*/
+            transition: all 2s;
+        }
+
+        .Ebox .A .B {
+            width: 40px;
+            height: 40px;
+            background: wheat;
+            margin: 5px;
+            /*position: absolute;*/
+            transition: all 2s;
+        }
+
+        input:checked+.A {
+            background: blueviolet;
+        }
+
+        input:checked+.A .B {
+            /*right: 0px;
+				transition: all 2s;*/
+            margin-left: 55px;
+            background: whitesmoke;
+        }
+    </style>
+    <hr>
+    <div class="Dbox">
+        <div class="DA">
+            <a href="">八戒</a>
+        </div>
+        <div class="DB">
+            <a href="">河汉之界</a>
+        </div>
+    </div>
+    <style>
+        .Dbox {
+            display: inline-block;
+            margin: 30PX auto;
+            height: 90px;
+        }
+
+        .Dbox a {
+            line-height: 40px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .DA {
+            width: 150px;
+            height: 40px;
+            background: orange;
+            text-align: center;
+            margin: 25px;
+            float: left;
+        }
+
+        .DA>a {
+            display: block;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            transition: all 0.6s;
+        }
+
+        .DA:hover>a {
+            transform: scale(1);
+        }
+
+        .DB {
+            width: 150px;
+            height: 40px;
+            background: orange;
+            text-align: center;
+            margin: 25px 0;
+            float: left;
+        }
+
+        .DB>a {
+            display: block;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            transition: all 0.8s;
+        }
+
+        .DB:hover>a {
+            animation: mun 0.8s infinite;
+            -webkit-animation: mun 0.8s infinite;
+        }
+
+        @keyframes mun {
+
+            /*from{
+					transform: scale(0.8);
+					-webkit-transform: scale(0.8);
+				}
+				to{
+					transform: scale(1);
+					-webkit-transform: scale(1);
+				}*/
+            0% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+            }
+
+            50% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+            }
+        }
+    </style>
+    <div class="Dbox">
+        <div class="FC">
+            <p>解释就是掩饰</p>
+        </div>
+        <div class="FD">咯是对你</div>
+    </div>
+    <style>
+        .Dbox div {
+            width: 150px;
+            height: 40px;
+            color: white;
+            float: left;
+            font-size: 18px;
+        }
+
+        .Dbox .FC {
+            background: green;
+            margin: 25px;
+            text-align: center;
+            transform-origin: 0 100% 0;
+        }
+
+        .Dbox .FC p {
+            line-height: 40px;
+            margin: 0;
+        }
+
+        .Dbox .FC:hover {
+            animation: nun 0.8s infinite;
+        }
+
+        @keyframes nun {
+            0% {
+                transform: skew(0);
+            }
+
+            10% {
+                transform: skew(15deg);
+            }
+
+            20% {
+                transform: skew(0deg);
+            }
+
+            30% {
+                transform: skew(-12deg);
+            }
+
+            40% {
+                transform: skew(0);
+            }
+
+            50% {
+                transform: skew(10deg);
+            }
+
+            60% {
+                transform: skew(0);
+            }
+
+            70% {
+                transform: skew(-8deg);
+            }
+
+            80% {
+                transform: skew(0);
+            }
+
+            90% {
+                transform: scale(5deg);
+            }
+
+            100% {
+                transform: skew(0);
+            }
+        }
+
+        .Dbox .FD {
+            background: green;
+            margin: 25px 0;
+            text-align: center;
+            line-height: 40px;
+            transform-origin: 50% 100% 0;
+            /*-webkit-transform: rotate(45deg);*/
+        }
+
+        .Dbox .FD:hover {
+            animation: ter 0.8s infinite;
+        }
+
+        @keyframes ter {
+            0% {
+                transform: rotate(0);
+            }
+
+            10% {
+                transform: rotate(6deg);
+            }
+
+            20% {
+                transform: rotate(0deg);
+            }
+
+            30% {
+                transform: rotate(-5deg);
+            }
+
+            40% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+
+            60% {
+                transform: rotate(0deg);
+            }
+
+            70% {
+                transform: rotate(-3deg);
+            }
+
+            80% {
+                transform: rotate(0deg);
+            }
+
+            90% {
+                transform: rotate(2deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    <div class="Dbox">
+        <div class="GE">
+            <a href="">临摹西山</a>
+            <div id="GE"></div>
+        </div>
+        <div class="GE GEA">
+            <a href="">临摹西山</a>
+            <div id="GEA"></div>
+        </div>
+    </div>
+    <style>
+        .Dbox .GE {
+            background: blue;
+            margin: 25px;
+            text-align: center;
+            line-height: 40px;
+            transform: scale(1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .Dbox .GE a {
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+        }
+
+        .Dbox #GE {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: deepskyblue;
+            position: absolute;
+            z-index: -1;
+            transform: scale(1.5);
+            transition: all 0.6s;
+        }
+
+        .Dbox .GE:hover #GE {
+            transform: scale(0);
+        }
+
+        .Dbox .GEA {
+            margin: 25px 0;
+        }
+
+        .Dbox #GEA {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: deepskyblue;
+            position: absolute;
+            z-index: -1;
+            transform: scale(0);
+            transition: all 0.6s;
+        }
+
+        .Dbox .GEA:hover #GEA {
+            transform: scale(1.5);
+        }
+    </style>
+    <hr />
+    <div class="pbox">
         <span>充填盒子</span>
         <i></i>
     </div>
     <style>
-        body{
+        body {
             text-align: center;
         }
-        .Cbox {
+
+        .pbox {
             position: relative;
             display: inline-block;
             margin: 30px auto;
@@ -134,7 +531,7 @@
             overflow: hidden;
             border-radius: 10px;
             z-index: 1;
-            
+
         }
 
         span {
@@ -153,7 +550,7 @@
             top: 0;
             left: 0;
             transform: scale(0);
-            transition: all 1s;
+            transition: transform 1s;
             z-index: -1;
             border-radius: 50%;
         }
@@ -163,17 +560,19 @@
         }
     </style>
     <script>
-        $('.Cbox').hover(function (ev) {
+        $('.pbox').hover(function (ev) {
             $('i').css({
-                top: (ev.clientY - $('.Cbox').offset().top - 50),
-                left: (ev.clientX - $('.Cbox').offset().left - 50)
+                top: (ev.clientY - $('.pbox').offset().top - 50),
+                left: (ev.clientX - $('.pbox').offset().left - 50)
             })
-            $('.Cbox').addClass('Ctian');
+            $('.pbox').addClass('Ctian');
             // console.log((ev.clientX - $('.Cbox').offset().left) + '/' + (ev.clientY - $('.Cbox').offset().top))
         }, function () {
-            $('.Cbox').removeClass('Ctian');
+            $('.pbox').removeClass('Ctian');
         })
     </script>
+    <hr>
+
 </body>
 
 </html>
