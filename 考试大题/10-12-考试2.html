@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="imgbox">
+        <img src="./imgs/TRY.png" />
+        <div class="fanda"></div>
+        <div class="biao"></div>
+    </div>
+    <div class="qiu">
+        <img src="./imgs/TRY.png" />
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        .imgbox {
+            height: 380px;
+            width: 300px;
+            margin: 30px 50px;
+            position: relative;
+            float: left;
+        }
+
+        .imgbox img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .imgbox .fanda {
+            height: 90px;
+            width: 90px;
+            background: orange;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+        }
+
+        .imgbox .biao {
+            height: 380px;
+            width: 300px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .qiu {
+            height: 530px;
+            width: 450px;
+            background: orange;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            display: none;
+            float: left;
+        }
+
+        .qiu img {
+            height: 1060px;
+            width: 900px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        var ibox = $('.imgbox');
+        var fand = $('.imgbox .fanda');
+        var biao = $('.imgbox .biao');
+        var fimg = $('.qiu img');
+        var qiun = $('.qiu');
+
+        biao.mousemove(function (ev) {
+            var x = ev.offsetX;
+            var y = ev.offsetY;
+
+            var wid = ibox.width() / 2;
+            var hei = ibox.height() / 2;
+
+            if (x <= (wid / 2)) {
+                x = (wid / 2);
+            }
+            if (x >= (300 - (wid / 2))) {
+                x = (300 - (wid / 2));
+            }
+            if (y <= (wid / 2)) {
+                y =  (wid / 2);
+            }
+            if (y >= (360 - (wid / 2))) {
+                y = (360 - (wid / 2));
+            }
+            fand.css({
+                width: wid,
+                height: hei,
+                top: y - hei / 2,
+                left: x - wid / 2,
+            });
+            fimg.css({
+                top: (y - hei / 2) * -2,
+                left: (x - wid / 2) * -3
+            });
+        });
+        biao.hover(function () {
+            qiun.show();
+        }, function () {
+            qiun.hide();
+        });
+    </script>
+</body>
+
+</html>

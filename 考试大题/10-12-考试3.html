@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="fang">
+            <div class="Abox">1</div>
+            <div class="Bbox">2</div>
+            <div class="Cbox">3</div>
+        </div>
+    </div>
+    <div class="nox">
+        <button class="s">s</button>
+        <button class="x">x</button>
+    </div>
+    <style>
+        .box {
+            background: lightcyan;
+        }
+
+        .fang {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            background: black;
+            font-size: 0;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .box .fang div {
+            font-size: 30px;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box .Abox {
+            background: green;
+        }
+
+        .box .Bbox {
+            background: red;
+        }
+
+        .box .Cbox {
+            background: orange;
+        }
+        .MM{
+            opacity: 1;
+            transition: all 1s;
+        }
+    </style>
+    <script>
+        var going = function(){
+            $('.Abox').addClass('.MM');
+        }
+        var 
+    </script>
+</body>
+
+</html>

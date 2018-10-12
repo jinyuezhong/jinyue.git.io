@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>信息</p>
+    <table border="2" id="box" cellspacing="0">
+        <tr id="aa">
+            <td></td>
+            <td><h3>姓名</h3></td>
+            <td><h3>薪水</h3></td>
+            <td><h3>年龄</h3></td>
+        </tr>
+        <tr class="A">
+            <td><label for="lol">
+                <input type="checkbox" id="Ad">
+            </label></td>
+            <td>张三</td>
+            <td>20000</td>
+            <td>23</td>
+        </tr>
+        <tr class="B">
+            <td><label for="lol">
+                <input type="checkbox" id="Bd">
+            </label></td>
+            <td>李四</td>
+            <td>22000</td>
+            <td>22</td>
+        </tr>
+        <tr class="C">
+            <td><label for="lol">
+                <input type="checkbox" id="Cd">
+            </label></td>
+            <td>王五</td>
+            <td>14000</td>
+            <td>26</td>
+        </tr>
+        <tr class="D">
+            <td><label for="lol">
+                <input type="checkbox" id="Dd">
+            </label></td>
+            <td>马六</td>
+            <td>15000</td>
+            <td>21</td>
+        </tr>
+    </table>
+    <style>
+        p{
+            width: 100px;
+            margin: 10px auto;
+        }
+        #box{
+            margin: 0 auto;
+        }
+        #box #aa{
+            text-align: center;
+            background: rgba(136, 134, 134, 0.788);
+        }
+        .A{
+            background: lightcyan;
+        }
+        .C{
+            background: lightcyan;
+        }
+        .B{
+            background: rgb(229, 236, 130);
+        }
+        .D{
+            background:rgb(229, 236, 130);
+        }
+        #box #aa td h3{
+            margin: 0;
+        }
+        #box tr td{
+            width: 150px;
+            line-height: 40px;
+            height: 40px;
+        }
+        #box input{
+            width: 20px;
+            height: 20px;
+            line-height: 40px;
+        }
+        #box .AW{
+            background: yellow;
+        }
+    </style>
+    <script>
+        $('#Ad').click(function(){
+            $('.A').toggleClass('AW');
+        })
+        $('#Bd').click(function(){
+            $('.B').toggleClass('AW');
+        })
+        $('#Cd').click(function(){
+            $('.C').toggleClass('AW');
+        })
+        $('#Dd').click(function(){
+            $('.D').toggleClass('AW');
+        })
+    </script>
+</body>
+</html>
