@@ -2,7 +2,7 @@
 JQ考试编程题:<br/>
 [第一题](http://jinyuezhong.github.io/考试大题/10-12-考试.html)<br/>
 [第二题](http://jinyuezhong.github.io/考试大题/10-12-考试2.html)<br/>
-
+[第三题](http://jinyuezhong.github.io/考试大题/10-12-考试3.html)<br/>
 
 
 css+js:<br/>
