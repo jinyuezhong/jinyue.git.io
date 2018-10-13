@@ -10,16 +10,12 @@
 </head>
 
 <body>
-    <div class="box">
+    <div class="box" id="iox">
         <div class="fang">
-            <div class="Abox">1</div>
-            <div class="Bbox">2</div>
-            <div class="Cbox">3</div>
+            <div class="Abox tobox">1</div>
+            <div class="Bbox tobox">2</div>
+            <div class="Cbox tobox">3</div>
         </div>
-    </div>
-    <div class="nox">
-        <button class="s">s</button>
-        <button class="x">x</button>
     </div>
     <style>
         .box {
@@ -30,7 +26,7 @@
             margin: 0 auto;
             width: 200px;
             height: 200px;
-            background: black;
+            /* background: black; */
             font-size: 0;
             position: relative;
             left: 0;
@@ -38,6 +34,8 @@
         }
 
         .box .fang div {
+            text-align: center;
+            line-height: 190px;
             font-size: 30px;
             width: 200px;
             height: 200px;
@@ -45,6 +43,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
+            transition: all 0.8s;
         }
 
         .box .Abox {
@@ -58,16 +58,25 @@
         .box .Cbox {
             background: orange;
         }
-        .MM{
+        /* .MM{
             opacity: 1;
             transition: all 1s;
-        }
+        } */
     </style>
     <script>
-        var going = function(){
-            $('.Abox').addClass('.MM');
-        }
-        var 
+        console.log($('.tobox')[0]);
+        var i = -1;
+        
+        var text =setInterval(function(){
+            i++;
+            if(i>$('.tobox').length-1){
+                i = 0;
+            }
+            for(var t = 0 ; t<$('.tobox').length ; t++){
+                $('.tobox')[t].style.opacity = '0';
+            }
+            $('.tobox')[i].style.opacity = '1';
+        },1500);
     </script>
 </body>
 
