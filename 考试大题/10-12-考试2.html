@@ -27,7 +27,8 @@
         .imgbox {
             height: 380px;
             width: 300px;
-            margin: 30px 50px;
+            margin: 30px auto;
+            margin-left: 30px; 
             position: relative;
             float: left;
         }
@@ -38,8 +39,8 @@
         }
 
         .imgbox .fanda {
-            height: 90px;
-            width: 90px;
+            /* height: 90px;
+            width: 90px; */
             background: orange;
             position: absolute;
             top: 0;
@@ -95,11 +96,11 @@
             if (x >= (300 - (wid / 2))) {
                 x = (300 - (wid / 2));
             }
-            if (y <= (wid / 2)) {
-                y =  (wid / 2);
+            if (y <= (hei / 2)) {
+                y =  (hei / 2);
             }
-            if (y >= (360 - (wid / 2))) {
-                y = (360 - (wid / 2));
+            if (y >= (380 - (hei / 2))) {
+                y = (380 - (hei / 2));
             }
             fand.css({
                 width: wid,
