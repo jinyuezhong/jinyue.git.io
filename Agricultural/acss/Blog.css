@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+}
+.container{
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+.Abox{
+    background: url('../imgs/banner.jpg');
+    width: 100%;
+    padding-top: 30px;
+}
+.Aboxtop{
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 18px;
+}
+.Aboxtop .Aboxnav li{
+    list-style: none;
+    display: inline-block;
+}
+.Aboxtop .Aboxnav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.Aboxtop .Aboxnav li a:hover{
+    border-top: 4px solid yellow;
+    color: yellow;
+}
+.Aboxtop .Aboxnav li::after{
+    content: '/';
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+}
+.Aboxtop .Aboxnav li:nth-last-child(1)::after{
+    content: ' ';
+}
+.Aboxtop .Aboxnav li:nth-of-type(5) a{
+    border-top: 4px solid yellow;
+    color: yellow;
+}
+.Aboxtop .Aboxsosuo{
+    margin-bottom: 0;
+}
+.Aboxtop .Aboxsosuo input{
+    color: white;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.8);
+}
+.Aboxtop .Aboxsosuo span{
+    color: white;
+}
+.Aboxculti h1{
+    padding: 350px 0;
+    margin: 0;
+}
+.Aboxculti h1 a{
+    font-size: 60px;
+    color: white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    text-decoration: none;
+}
+
+/* B */
+.boxB {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.boxB .vd {
+    text-align: center;
+}
+
+.boxB .vd h1 {
+    color: #f2af00;
+    font-size: 200px;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.boxB .vd p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.boxB .vd a .back {
+    width: 180px;
+    height: 40px;
+    background: rgb(17, 180, 17);
+    line-height: 40px;
+    margin: 50px;
+    margin: 0 auto;
+}
+
+.boxB .vd a {
+    color: white;
+    text-decoration: none;
+}
+
+/* bottom */
+/* F */
+.Fbox{
+    background: #3f454d;
+}
+.Fboxtop{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.Fboxtop h1{
+    margin: 30px auto;
+    color: white;
+    opacity: 0;
+}
+.Fboxtop .Fboxdiv{
+    opacity: 0;
+}
+.Fboxtop .Fboxdiv:nth-of-type(1){
+    padding-left: 0;
+    padding-right: 20px;
+}
+.Fboxtop .Fboxdiv .Fboxbot{
+    height: 100px;
+    margin: 10px auto;
+}
+.Fboxtop .Fboxdiv .Fboxbot img{
+    padding: 0;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen.col-xs-8{
+    padding: 0;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen h3{
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen h3:hover{
+    color: orange;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen p{
+    margin: 0;
+    color: #999;
+}
+.Fboxtop .Fboxdiv ul li{
+    color: #999;
+    list-style: url('../imgs/list-arrow.png');
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.Fboxtop .Fboxdiv ul li:hover{
+    color: orange;
+}
+.Fboxdiv .Fboxmon{
+    height: 45px;
+    margin-bottom: 30px;
+}
+.Fboxdiv .Fboxmon .Fboxhot p{
+    margin: 0;
+    color: #999;
+}
+.Fboxdiv .Fboxmon .Fboxtu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -224px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxsatu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -265px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxliantu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -306px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxlian a{
+    margin: 0;
+    color: #999;
+    text-decoration: none;
+}
+.Fboxdiv .Fboxmon .Fboxlian a:hover{
+    color: orange;
+}
+
+/* F js */
+.Fboxtop.container.Fboxmove h1{
+    opacity: 1;
+    transition: 1S 2S;
+}
+.Fboxtop.container.Fboxmove .Fboxdiv{
+    opacity: 1;
+    transition: 2S 3S;
+}
+
+/* G */
+.Gboxtop{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.Gboxtop .Gboxcenter{
+    text-align: center;
+}
+.Gboxtop .Gboxbiv{
+    width: 60px;
+    height: 60px;
+    background: url(../imgs/img-sprite1.png);
+    display: inline-block;
+    margin: 30px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(1){
+    background-position: 2px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(2){
+    background-position: -54px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(3){
+    background-position: -108px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(4){
+    background-position: -164px 0px;
+}
+.Gboxtop .Gboxbiv .div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    display: block;
+    opacity: 0;
+}
+.Gboxtop .Gboxbiv:hover .div{
+    opacity: 0.5;
+}
+.Gboxtop .Gboxwencen li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    margin-bottom: 20px;
+}
+.Gboxtop .Gboxwencen li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.Gboxtop .Gboxtopwen{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.Gboxtop .Gboxtopwen a{
+    font-size: 28px;
+    color: limegreen;
+}
+.Gboxtop .Gboxtopwen a:hover{
+    color: black;
+}
+
+/* G js */
+.Gboxtop.container.Gboxmove .Gboxcenter{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop.container.Gboxmove .Gboxwencen{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop.container.Gboxmove .Gboxtopwen{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop .Gboxcenter{
+    transform: translateX(1500px);
+    transition: all 1s;
+    opacity: 0;
+}
+.Gboxtop .Gboxwencen{
+    transform: translateX(-500px);
+    transition: all 1s;
+    opacity: 0;
+}
+.Gboxtop .Gboxtopwen{
+    transform: translateX(-1500px);
+    transition: all 1s;
+    opacity: 0;
+}
