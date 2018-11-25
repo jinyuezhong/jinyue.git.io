@@ -72,6 +72,12 @@ body {
 .Bboxgon h1{
     padding: 20px 0;
 }
+.Bboxgon .Bboxwen .nonto{
+    height: 310px;
+}
+.Bboxgon .Bboxwen .nonto .Bboxleft{
+    height: 100%;
+}
 .Bboxgon .Bboxwen .Bboxleft li{
     list-style: url(../imgs/list-arrow.png);
     margin: 15px auto;
