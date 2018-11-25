@@ -37,16 +37,13 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: none;
+	z-index: -1;
+	/* display: none; */
 }
-.A .Abox .Aboxleft ul #Q:hover+.VV{
+/* .A .Abox .Aboxleft ul #Q:hover+.VV{
 	display: block;
 	z-index: -1;
-}
-.A .Abox .Aboxright ul #Q:hover+.VV{
-	display: block;
-	z-index: -1;
-}
+} */
 .A {
 	background: #2c0903;
 	height: 40px;
@@ -82,10 +79,10 @@ body {
 	color: darkgray;
 }
 
-.Abox a:hover {
+/* .Abox a:hover {
 	color: white;
 	text-shadow: 0px 0px 10px white;
-}
+} */
 
 
 /*.Abox ul li:nth-child(1) a:after,
@@ -105,9 +102,9 @@ body {
 	background: url(tu/iocF.png) no-repeat -143px -130px;
 }
 
-.Abox #Q:hover a:after {
+/* .Abox #Q:hover a:after {
 	background: url(tu/iocF.png) no-repeat -143px -145px;
-}
+} */
 
 .Abox #AA {
 	/*display: block;*/
@@ -118,9 +115,9 @@ body {
 	background: url(tu/iocF.png) no-repeat -15px -76px;
 }
 
-.Abox #AA:hover {
+/* .Abox #AA:hover {
 	background: url(tu/iocF.png) no-repeat -15px -120px;
-}
+} */
 
 .Aboxleft .Aboxxiao {
 	background: rgba(21, 26, 35, .95);
@@ -143,10 +140,10 @@ body {
 	margin: 0px 10px;
 }
 
-.Aboxleft li .Aboxxiao a:hover {
+/* .Aboxleft li .Aboxxiao a:hover {
 	box-shadow: 0 0 5px 0 white;
 	filter: brightness(120%);
-}
+} */
 
 .Aboxxiao a:nth-of-type(1) {
 	background: url(tu/LA.jpg) no-repeat;
@@ -177,12 +174,12 @@ body {
 	visibility: hidden;
 }
 
-.Aboxleft ul li:hover .Aboxxiao {
+/* .Aboxleft ul li:hover .Aboxxiao {
 	transition: all 1s;
 	opacity: 1;
 	visibility: visible;
 	z-index: 99;
-}
+} */
 
 .Aboxxiao a {
 	position: relative;
@@ -191,10 +188,10 @@ body {
 	opacity: 0;
 }
 
-.Aboxleft ul li:hover .Aboxxiao a {
+/* .Aboxleft ul li:hover .Aboxxiao a {
 	top: 0px;
 	opacity: 1;
-}
+} */
 
 .Aboxleft ul li .Aboxxiao a:nth-of-type(1) {
 	transition-delay: 50ms;
@@ -235,12 +232,12 @@ body {
 	opacity: 0;
 }
 
-.Aboxleft ul li:hover .AboxxiaoA {
+/* .Aboxleft ul li:hover .AboxxiaoA {
 	visibility: visible;
 	transition: all 0.5s;
 	opacity: 1;
 	z-index: 30;
-}
+} */
 
 .AboxxiaoA p {
 	text-align: center;
@@ -260,10 +257,10 @@ body {
 	/*background: rgba(33, 38, 46, 1);*/
 }
 
-.Aboxleft ul li:hover .AboxxiaoA a {
+/* .Aboxleft ul li:hover .AboxxiaoA a {
 	top: -30px;
 	opacity: 1;
-}
+} */
 .AboxxiaoA>a:hover{
 		background: rgba(255,255,255,0.5);
 		transition: all .1ms;
@@ -375,9 +372,9 @@ body {
 	z-index: 999;
 }
 
-.Abox .Aboxright:hover #A {
+/* .Abox .Aboxright:hover #A {
 	visibility: visible;
-}
+} */
 
 .Abox .Aboxright #A a:nth-of-type(1) {
 	background: dodgerblue;
