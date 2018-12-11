@@ -32,4 +32,4 @@ luan:<br/>
 [轮播图](http://jinyuezhong.github.io/luan/lunbo.html)<br/>
 [小车跑路](http://jinyuezhong.github.io/luan/小车跑路.html)<br/>
 
-[xm]((http://jinyuezhong.github.io/niuyou/niu-html/niuyouniu.html)
+[xm](http://jinyuezhong.github.io/niuyou/niu-html/niuyouniu.html)
