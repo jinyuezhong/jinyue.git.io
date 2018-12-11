@@ -31,3 +31,5 @@ luan:<br/>
 [图片放大镜](http://jinyuezhong.github.io/luan/tupian.html)<br/>
 [轮播图](http://jinyuezhong.github.io/luan/lunbo.html)<br/>
 [小车跑路](http://jinyuezhong.github.io/luan/小车跑路.html)<br/>
+
+[xm]((http://jinyuezhong.github.io/niuyou/niu-html/niuyouniu.html)
