@@ -445,9 +445,11 @@ body {
     line-height: 265px;
     transform: scale(0);
     box-shadow: 0 0 8px white;
+    display: none;
 }
 .Dboxtop .Dboxtu:hover .Dboxxiaotu{
     transform: scale(1);
+    display: none;
 }
 
 /* D js */
