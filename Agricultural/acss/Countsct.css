@@ -98,7 +98,7 @@ body {
     border: none;
     width: 150px;
     color: white;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .but:hover {
@@ -192,11 +192,11 @@ body {
 /* F js */
 .Fboxtop.container.Fboxmove h1{
     opacity: 1;
-    transition: 1S 2S;
+    transition: 0.5S 0.8S;
 }
 .Fboxtop.container.Fboxmove .Fboxdiv{
     opacity: 1;
-    transition: 2S 3S;
+    transition: 0.8S 0.5S;
 }
 
 /* G */
@@ -275,16 +275,27 @@ body {
 }
 .Gboxtop .Gboxcenter{
     transform: translateX(1500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
 }
 .Gboxtop .Gboxwencen{
     transform: translateX(-500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
 }
 .Gboxtop .Gboxtopwen{
     transform: translateX(-1500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .Aboxtop .Aboxnav li:nth-of-type(6) a{
+        border-top:none;
+        color: yellow;
+    }
+    .Aboxtop .Aboxnav li a:hover{
+        border-top: none;
+        color: yellow;
+    }
 }

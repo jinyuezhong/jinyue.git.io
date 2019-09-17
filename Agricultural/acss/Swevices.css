@@ -128,7 +128,7 @@ body {
     top: 0px;
     left: 0;
     bottom: 0;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .Eboxtop .Eboxdiv .Eboxrend:hover .Eboxmode{
     transform: rotateX(90deg);    
@@ -145,15 +145,15 @@ body {
 }
 .Eboxtop .Eboxdiv:nth-of-type(1){
     transform: translateX(1500px);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .Eboxtop .Eboxdiv:nth-of-type(2){
     transform: translateY(-1000px);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .Eboxtop .Eboxdiv:nth-of-type(3){
     transform: translateX(-1500px);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 /* C */
@@ -185,22 +185,22 @@ body {
 }
 .Cboxtop h1{
     transform: translateX(1000px);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .Cboxtop .Cboxdiv{
     opacity: 0;
 }
 .Cboxtop .Cboxdiv:nth-of-type(1){
     transform: translateX(1000px);
-    transition: 0.2 1s;
+    transition: 0.2 0.5s;
 }
 .Cboxtop .Cboxdiv:nth-of-type(2){
     transform: translateX(1000px);
-    transition: 0.5s 1s;
+    transition: 0.5s 0.5s;
 }
 .Cboxtop .Cboxdiv:nth-of-type(3){
     transform: translateX(1000px);
-    transition: 0.8s 1s;
+    transition: 0.8s 0.5s;
 }
 
 /* bottom */
@@ -290,11 +290,11 @@ body {
 /* F js */
 .Fboxtop.container.Fboxmove h1{
     opacity: 1;
-    transition: 1S 2S;
+    transition: 0.5S 0.8S;
 }
 .Fboxtop.container.Fboxmove .Fboxdiv{
     opacity: 1;
-    transition: 2S 3S;
+    transition: 0.8S 1S;
 }
 
 /* G */
@@ -373,16 +373,439 @@ body {
 }
 .Gboxtop .Gboxcenter{
     transform: translateX(1500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
 }
 .Gboxtop .Gboxwencen{
     transform: translateX(-500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
 }
 .Gboxtop .Gboxtopwen{
     transform: translateX(-1500px);
-    transition: all 1s;
+    transition: all 0.5s;
     opacity: 0;
+}
+
+@media screen and (max-width: 750px) {
+    /*菜单栏*/
+    h1{
+        text-align: center;
+    }
+    .Aboxtop{
+        margin: 10px auto;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 18px;
+    }
+   .Abox .Aboxtop .Aboxnav{
+       text-align: center;
+       min-width: 35px;
+       min-height: 30px;
+       max-width: 40px;
+       max-height: 35px;
+       background-image: url(../imgs/nav.png);
+       background-repeat:no-repeat;
+       background-size: cover;
+       border-radius: 5px;
+   }
+   .Abox .Aboxtop .Home_2 .openli{
+       display: none;
+   }
+   .Abox .Aboxtop .Home_2 .openli li{
+       background: yellowgreen;
+       min-width: 300px;
+       max-width: 500px;
+       height: 40px;
+       line-height: 40px;
+       float: left;
+       position: relative;
+       z-index: 2;
+       border-top: 1px solid white;
+       border-bottom: 1px solid white;
+   }
+   .Aboxtop .Aboxnav li::after{
+    content: ' ';
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+    }
+    .Aboxtop .Aboxnav .openli li:nth-of-type(1){
+        margin-top: 35px;
+    }
+    .Aboxtop .Aboxnav li:nth-of-type(3) a{
+        border-top:none;
+        color: yellow;
+    }
+    .Aboxtop .Aboxnav li a:hover{
+        border-top: none;
+        color: yellow;
+    }
+    /*Cultivation纸条*/
+    .Aboxculti h1 a{
+        font-size: 36px;
+    }
+    .Aboxculti h1{
+        padding: 150px 0;
+    }
+    /* 背景 */
+    .Abox{
+        background: url('../imgs/banner.jpg') #eee;
+        /* background-size: 100% 30%; */
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    /* C_2 */
+    .Cbox{
+        background: #37353b;
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+    .Cboxtop h1{
+        color: white;
+        padding: 30px; 
+        margin-top: 10px;
+        opacity: 1;
+    }
+    .Cboxtop h3{
+        color: white;
+        padding: 10px 0;
+    }
+    .Cboxtop p{
+        color: #555;
+        padding: 0 25px;
+    }
+    .Cboxtop .Cboxdiv .Cboximg{
+        background: green;
+        padding: 15px;
+    }
+    .Cboxtop .Cboxdiv .Cboximg:hover{
+        background: orange;
+    }
+    .Cboxtop .Cboxdiv.col-xs-4{
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    /* C js */
+    .container.Cboxtop.Cboxmove h1{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .container.Cboxtop.Cboxmove .Cboxdiv{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .Cboxtop h1{
+        transform: translateX(0px);
+        transition: all 0.5s;
+    }
+    .Cboxtop .Cboxdiv{
+        opacity: 1;
+    }
+    .Cboxtop .Cboxdiv:nth-of-type(1){
+        transform: translateX(0px);
+        transition: 0.2 0.5s;
+    }
+    .Cboxtop .Cboxdiv:nth-of-type(2){
+        transform: translateX(0px);
+        transition: 0.5s 0.8s;
+    }
+    .Cboxtop .Cboxdiv:nth-of-type(3){
+        transform: translateX(0px);
+        transition: 0.8s 1s;
+    }
+    /* E_2 */
+    .Ebox{
+        background: #eee;
+    }
+    .Eboxtop{
+        padding-top: 50px;
+        padding-bottom: 100px; 
+    }
+    .Eboxtop h1{
+        margin: 30px auto;
+        opacity: 1;
+    }
+    .Eboxtop .Eboxdiv.col-xs-4{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 25px;
+        text-align: center;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(1){
+        padding-left: 0;
+        padding-right: 0px;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(2){
+        padding: 0 0px;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(3){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .Eboxtop .Eboxdiv .col-xs-12{
+        padding: 0;
+    }.Eboxtop .Eboxdiv img{
+        margin-bottom: 20px;
+    }
+    .Eboxtop .Eboxdiv a{
+        color: black;
+        text-decoration: none;
+    }
+    .Eboxtop .Eboxdiv p{
+        color: #999; 
+    }
+    .Eboxtop .Eboxdiv p a:hover{
+        color: green;
+        text-decoration: underline;
+    }
+    .Eboxtop .Eboxdiv .Eboxrend{
+        margin-top: 20px;
+        background: orange;
+        position: relative;
+        padding: 0;
+        z-index: 1;
+    }
+    .Eboxtop .Eboxdiv .Eboxrend.pull-left{
+        float: none;
+        margin-left: 25%;
+        margin-bottom: 20px;
+    }
+    .Eboxtop .Eboxdiv .Eboxrend h2{
+        position: relative;
+        z-index: 1;
+        
+    }
+    .Eboxtop .Eboxdiv .Eboxrend .Eboxmode{
+        background: green;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        bottom: 0;
+        transition: all 0.8s;
+    }
+    .Eboxtop .Eboxdiv .Eboxrend:hover .Eboxmode{
+        transform: rotateX(90deg);    
+    }
+    
+    /* E js */
+    .Eboxtop.container.Eboxmove h1{
+        transform: translateX(0);
+        opacity: 1;
+    } 
+    .Eboxtop.container.Eboxmove .Eboxdiv{
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .Eboxtop h1{
+        transform: translateX(0px);
+        transition: all 0.5s;
+    }
+    .Eboxtop .Eboxdiv{
+        opacity: 1;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(1){
+        transform: translateX(0px);
+        transition: all 0.8s;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(2){
+        transform: translateY(0px);
+        transition: all 0.5s;
+    }
+    .Eboxtop .Eboxdiv:nth-of-type(3){
+        transform: translateX(0px);
+        transition: all 0.5s;
+    }
+
+    /* F */
+.Fbox{
+    background: #3f454d;
+}
+.Fboxtop{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.Fboxtop h1{
+    margin: 30px auto;
+    color: white;
+    opacity: 1;
+}
+.Fboxtop .Fboxdiv.col-xs-4{
+    opacity: 1;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.Fboxtop .Fboxdiv:nth-of-type(1){
+    padding-left: 0;
+    /* padding-right: 20px; */
+}
+.Fboxtop .Fboxdiv .Fboxbot{
+    height: 100px;
+    margin: 10px auto;
+}
+.Fboxtop .Fboxdiv .Fboxbot img{
+    padding: 0;
+}
+.Fboxtop .Fboxdiv .Fboxbot .pull-left.col-xs-3{
+    width: 5%;
+    float: none;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen.col-xs-8{
+    padding: 0;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen h3{
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen h3:hover{
+    color: orange;
+}
+.Fboxtop .Fboxdiv .Fboxbot .Fboxwen p{
+    margin: 0;
+    color: #999;
+}
+.Fboxtop .Fboxdiv ul li{
+    color: #999;
+    list-style: url('../imgs/list-arrow.png');
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.Fboxtop .Fboxdiv ul li:hover{
+    color: orange;
+}
+.Fboxdiv .Fboxmon{
+    height: 45px;
+    margin-bottom: 30px;
+}
+.Fboxdiv .Fboxmon .Fboxhot p{
+    margin: 0;
+    color: #999;
+}
+.Fboxdiv .Fboxmon .Fboxtu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -224px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxsatu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -265px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxliantu{
+    height: 100%;
+    background: url(../imgs/img-sprite1.png);
+    background-position: -306px 0px;
+}
+.Fboxdiv .Fboxmon .Fboxlian a{
+    margin: 0;
+    color: #999;
+    text-decoration: none;
+}
+.Fboxdiv .Fboxmon .Fboxlian a:hover{
+    color: orange;
+}
+
+/* F js */
+.Fboxtop.container.Fboxmove h1{
+    opacity: 1;
+    transition: 0.5S 1S;
+}
+.Fboxtop.container.Fboxmove .Fboxdiv{
+    opacity: 1;
+    transition: 1S 1.2S;
+}
+/* G */
+.Gboxtop{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.Gboxtop .Gboxcenter{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.Gboxtop .Gboxbiv{
+    width: 60px;
+    height: 60px;
+    background: url(../imgs/img-sprite1.png);
+    display: inline-block;
+    margin: 30px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(1){
+    background-position: 2px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(2){
+    background-position: -53px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(3){
+    background-position: -108px 0px;
+}
+.Gboxtop .Gboxbiv:nth-of-type(4){
+    background-position: -164px 0px;
+}
+.Gboxtop .Gboxbiv .div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    display: block;
+    opacity: 0;
+}
+.Gboxtop .Gboxbiv:hover .div{
+    opacity: 0.5;
+}
+.Gboxtop .Gboxwencen li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    margin-bottom: 20px;
+}
+.Gboxtop .Gboxwencen li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.Gboxtop .Gboxtopwen{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.Gboxtop .Gboxtopwen a{
+    font-size: 28px;
+    color: limegreen;
+}
+.Gboxtop .Gboxtopwen a:hover{
+    color: black;
+}
+
+/* G js */
+.Gboxtop.container.Gboxmove .Gboxcenter{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop.container.Gboxmove .Gboxwencen{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop.container.Gboxmove .Gboxtopwen{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.Gboxtop .Gboxcenter{
+    transform: translateX(0px);
+    transition: all 0.5s;
+    opacity: 1;
+}
+.Gboxtop .Gboxwencen{
+    transform: translateX(0px);
+    transition: all 0.5s;
+    opacity: 1;
+}
+.Gboxtop .Gboxtopwen{
+    transform: translateX(0px);
+    transition: all 0.5s;
+    opacity: 1;
+}
 }
